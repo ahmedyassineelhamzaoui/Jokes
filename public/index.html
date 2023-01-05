@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-full h-screen flex  justify-center items-center ">
+            <div class="w-9/12">
+            <div class="w-full flex justify-center items-center border-8 border-gray-500 rounded">
+                <div class="w-full">
+                <input type="text" id="mydata"
+                    class="bg-gray-50 border border-0 outline-0 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="entrer une Devise" >
+                </div>
+                <div>
+                    <select id="selecte" class="h-full outline-0" name="" id="" >
+                        <option class="values" value="1">gbp</option>
+                        <option class="values" value="2">euro</option>
+                        <option class="values" value="3">DH</option>
+                        <option class="values" value="4">usd</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+            <div>
+                <p id="result"></p>
+            </div>
+    </div>
+    <script src="../public/assets/scripts.js"></script>
+</body>
+
+</html>
