@@ -1,3 +1,8 @@
+<?php
+
+require_once('../app/view/view.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,11 +48,12 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-6 ">
+                <?php foreach($rows as $row){ ?>
+                    <div class="col-sm-12 col-md-6 ">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="card-title d-flex justify-content-between">
-                                <span class="name-joke">Joke Name</span>
+                                <span class="name-joke"><?= $row["name"]?></span>
                                 <div class="buttons">
                                     <button class="delete-joke btn bg-danger px-2 py-1"  name="delete-joke">
                                         <i class="fa-solid fa-trash text-white"></i>
@@ -60,34 +66,12 @@
                                 </div>
                                 
                             </div>
-                            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            <div class="card-text"><?= $row["content"]?></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 ">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="card-title">Joke Name</div>
-                            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 ">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="card-title">Joke Name</div>
-                            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 ">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="card-title">Joke Name</div>
-                            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                        </div>
-                    </div>
-                </div>
+               
+                <?php } ?>
             </div>
         </div>
     </main>

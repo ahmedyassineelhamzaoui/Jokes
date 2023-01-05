@@ -1,5 +1,5 @@
 <?php
-require_once('../model/model.php');
+require_once('./../app/model/model.php');
 class Alltraitment extends Connnexion{
 
    public function __construct()
