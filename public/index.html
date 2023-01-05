@@ -22,20 +22,20 @@
                     <form action="" method="post">
                         <input type="text" name="search" class="form-control search" placeholder="search for jokes">
                     </form>
-    
+                </div>
+                <div class="col-3">
+                    <form action="" method="post">
+                            <button type="submit" name="show" class="btn bg-secondary text-white form-control show-jokes">Search Jokes</button>
+                    </form>
                 </div>
                 <div class="col-3">
                     <form action="" method="post">
                         <a href="#modal-task" data-bs-toggle="modal">
-                            <button type="submit" name="add" class="btn bg-info text-white form-control add-jokes" id="add-joke" onclick="hideOtherBtn()">Add Jokes</button>
+                            <button type="submit" name="add" class="btn bg-info text-white form-control add-jokes" id="add-joke" onclick="hideOtherBtn(1)">Add Jokes</button>
                         </a>
                     </form>
                 </div>
-                <div class="col-3">
-                    <form action="" method="post">
-                            <button type="submit" name="show" class="btn bg-secondary text-white form-control show-jokes">Show Jokes</button>
-                    </form>
-                </div>
+                
             </div>
         </div>
     </header>
@@ -49,11 +49,11 @@
                             <div class="card-title d-flex justify-content-between">
                                 <span class="name-joke">Joke Name</span>
                                 <div class="buttons">
-                                    <button class="delete-joke btn bg-danger px-2 py-1"  name="delete-joke">
+                                    <button class="delete-joke btn bg-danger px-2 py-1" onclick="deleteJoke()"  name="delete-joke">
                                         <i class="fa-solid fa-trash text-white"></i>
                                     </button>
                                     <a href="#modal-task" data-bs-toggle="modal">
-                                        <button class="update-joke btn bg-info px-2 py-1" name="update-joke">
+                                        <button class="update-joke btn bg-info px-2 py-1" name="update-joke" onclick="hideOtherBtn(2)">
                                             <i class="fa-solid fa-square-pen text-white"></i>
                                         </button>
                                     </a>    
