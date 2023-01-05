@@ -1,6 +1,5 @@
 <?php
-
-require_once('../classes/crud.class.php');
+require_once('../model/model.php');
 class Alltraitment extends Connnexion{
 
    public function __construct()
