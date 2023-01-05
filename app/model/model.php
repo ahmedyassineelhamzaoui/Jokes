@@ -19,7 +19,4 @@
       }
     }
 
-   $dsn=new Connnexion();
-
-
 ?>
