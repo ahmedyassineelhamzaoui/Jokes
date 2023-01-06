@@ -1,11 +1,11 @@
 <?php
-require_once('../classes/crud.class.php');
+require_once('./../app/classes/crud.class.php');
 //  {addJock();}
 
 $myada=new Alltraitment();
  if(isset($_POST["add"])){
-    $name=$_POST["name"];
-    $content=$_POST["content"];
+    $name=$_POST["joke-name"];
+    $content=$_POST["joke-content"];
     $myada->insertData('INSERT INTO myjoke(name,content) VALUES(?,?)',array($name,$content));
  }
  if(isset($_POST["delete"])){
@@ -21,7 +21,7 @@ $myada=new Alltraitment();
     $myada->updatetData('UPDATE myjoke SET name=?,content=? WHERE id=?',array($name,$content,$id));
  }
 
-
+ $rows=$myada->getData("SELECT * FROM myjoke");
 
 
 ?>
