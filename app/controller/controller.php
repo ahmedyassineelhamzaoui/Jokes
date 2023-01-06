@@ -2,6 +2,12 @@
 require_once('./../app/classes/crud.class.php');
 //  {addJock();}
 
+
+
+
+
+
+
 $myada=new Alltraitment();
  if(isset($_POST["add"])){
     $name=$_POST["joke-name"];
@@ -14,16 +20,23 @@ $myada=new Alltraitment();
 
  }
 
-
- if(isset($_POST["update-joke"])){
-    $id=$_POST["id"];
-    $name=$_POST["new_name"];
-    $content=$_POST["new_conetnt"];
-   //  $param=$myada->getData("SELECT *");
-   //  $myada->updatetData('UPDATE myjoke SET name=?,content=? WHERE id=?',array($name,$content,$id));
+ if(isset($_POST["show"])){
+   $search=$_POST["search"];
+   $rows=$myada->getSpecifikData("SELECT * FROM myjoke WHERE name LIKE ? ",array("%".$_POST["search"]."%"));
+ }else{
+   $rows=$myada->getData("SELECT * FROM myjoke");
  }
 
- $rows=$myada->getData("SELECT * FROM myjoke");
-
+ if(isset($_POST["update"])){
+   $id=$_POST['product-id'];
+   $name=$_POST["joke-name"];
+   $content=$_POST["joke-content"];
+   try{   
+      $myada->updatetData("UPDATE myjoke set name=?,content=? where id= ?",array($name,$content,$id));
+      header('location:index.php');
+   }catch(exception $e){
+      echo "error ".$e->getMessage();
+   }
+}
 
 ?>

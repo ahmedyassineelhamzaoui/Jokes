@@ -6,6 +6,11 @@ class Alltraitment extends Connnexion{
    {
     parent :: __construct();
    }
+   public function getSpecifikData($query,$params=[]){
+      $statment=$this->dbs->prepare($query);
+      $statment->execute($params);
+      return $statment->fetchAll(PDO::FETCH_ASSOC);
+     }
    public function getData($query){
     $statment=$this->dbs->prepare($query);
     $statment->execute();
