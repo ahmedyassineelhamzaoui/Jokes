@@ -54,17 +54,20 @@ require_once('../app/view/view.php');
                         <div class="card-body">
                             <div class="card-title d-flex justify-content-between">
                                 <span class="name-joke"><?= $row["name"]?></span>
+                                <form action="" method="post">
+                                <input type="hidden" name="id-card" value="<?= $row["id"]?>">
                                 <div class="buttons">
-                                    <button class="delete-joke btn bg-danger px-2 py-1" onclick="deleteJoke()"  name="delete-joke">
+                                    <button type="submit" name="delete" class="delete-joke btn bg-danger px-2 py-1" onclick="deleteJoke()"  name="delete-joke">
                                         <i class="fa-solid fa-trash text-white"></i>
                                     </button>
+
                                     <a href="#modal-task" data-bs-toggle="modal">
                                         <button class="update-joke btn bg-info px-2 py-1" name="update-joke" onclick="hideOtherBtn(2)">
                                             <i class="fa-solid fa-square-pen text-white"></i>
                                         </button>
                                     </a>    
                                 </div>
-                                
+                                </form>
                             </div>
                             <div class="card-text"><?= $row["content"]?></div>
                         </div>

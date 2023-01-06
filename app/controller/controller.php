@@ -9,7 +9,7 @@ $myada=new Alltraitment();
     $myada->insertData('INSERT INTO myjoke(name,content) VALUES(?,?)',array($name,$content));
  }
  if(isset($_POST["delete"])){
-    $id=$_POST["id"];
+    $id=$_POST["id-card"];
     $myada->deleteData('DELETE FROM myjoke WHERE id=?',array($id));
 
  }
