@@ -36,7 +36,7 @@ require_once('../app/view/view.php');
                 <div class="col-3">
                     <form action="" method="post">
                         <a href="#modal-task" data-bs-toggle="modal">
-                            <button type="submit" name="add" class="btn bg-info text-white form-control add-jokes" id="add-joke" onclick="hideOtherBtn(1)">Add Jokes</button>
+                            <button type="submit"  name="add" class="btn bg-info text-white form-control add-jokes" id="add-joke" onclick="hideOtherBtn(1)">Add Jokes</button>
                         </a>
                     </form>
                 </div>
@@ -57,12 +57,11 @@ require_once('../app/view/view.php');
                                 <form action="" method="post">
                                 <input type="hidden" name="id-card" value="<?= $row["id"]?>">
                                 <div class="buttons">
-                                    <button type="submit" name="delete" class="delete-joke btn bg-danger px-2 py-1" onclick="deleteJoke()"  name="delete-joke">
+                                    <button type="submit" name="delete" class="delete-joke btn bg-danger px-2 py-1" onclick="deleteJoke()" >
                                         <i class="fa-solid fa-trash text-white"></i>
                                     </button>
-
-                                    <a href="#modal-task" data-bs-toggle="modal" onclick="editTask(<?= $row['id'] ?>)">
-                                        <button class="update-joke btn bg-info px-2 py-1" name="update-joke"  onclick="hideOtherBtn(2)">
+                                    <a href="#modal-task" data-bs-toggle="modal">
+                                        <button type="submit"  class="update-joke btn bg-info px-2 py-1" name="update-joke" onclick="hideOtherBtn(2)">
                                             <i class="fa-solid fa-square-pen text-white"></i>
                                         </button>
                                     </a>    

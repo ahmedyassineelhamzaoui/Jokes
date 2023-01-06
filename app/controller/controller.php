@@ -14,11 +14,13 @@ $myada=new Alltraitment();
 
  }
 
- if(isset($_POST["update"])){
+
+ if(isset($_POST["update-joke"])){
     $id=$_POST["id"];
     $name=$_POST["new_name"];
     $content=$_POST["new_conetnt"];
-    $myada->updatetData('UPDATE myjoke SET name=?,content=? WHERE id=?',array($name,$content,$id));
+   //  $param=$myada->getData("SELECT *");
+   //  $myada->updatetData('UPDATE myjoke SET name=?,content=? WHERE id=?',array($name,$content,$id));
  }
 
  $rows=$myada->getData("SELECT * FROM myjoke");

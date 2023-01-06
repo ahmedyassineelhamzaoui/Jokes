@@ -27,17 +27,12 @@ function editTask(id){
 
     $.ajax({
         type: "POST",
-        url: '../php-scripts/scripts.php',
+        url: '../../app/controller/controller.php',
         data: {openTask : id},
         success: function (obj) {
             console.log(obj);
-            document.getElementById('product-name').value                                    = obj[0];
-            document.getElementById('product-amount').value                                  = obj[1];
-            document.getElementById('product-date').value                                    = obj[2];
-            document.getElementById('product-price').value                                   = obj[3];
-            document.getElementById('product-description').value                             = obj[4];
-            document.getElementById('product-image').value                                   = obj[5];
-
+            document.getElementById('joke-name').value                                    = obj[0];
+            document.getElementById('joke-content').value                                  = obj[1];
         }
     });
 
