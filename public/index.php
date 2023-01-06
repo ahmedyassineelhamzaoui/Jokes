@@ -58,8 +58,8 @@ require_once('../app/view/view.php');
                                     <button class="delete-joke btn bg-danger px-2 py-1" onclick="deleteJoke()"  name="delete-joke">
                                         <i class="fa-solid fa-trash text-white"></i>
                                     </button>
-                                    <a href="#modal-task" data-bs-toggle="modal">
-                                        <button class="update-joke btn bg-info px-2 py-1" name="update-joke" onclick="hideOtherBtn(2)">
+                                    <a href="#modal-task" data-bs-toggle="modal" onclick="editTask(<?= $row['id'] ?>)">
+                                        <button class="update-joke btn bg-info px-2 py-1" name="update-joke"  onclick="hideOtherBtn(2)">
                                             <i class="fa-solid fa-square-pen text-white"></i>
                                         </button>
                                     </a>    
