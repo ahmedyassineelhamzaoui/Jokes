@@ -18,22 +18,18 @@ function deleteJoke(){
 }
 
 
-function editTask(id){
+function editjock(id,name,content){
+    let jokeName=document.querySelector("#joke-name");
+    let contentName=document.querySelector("#joke-content");
+    let idInnput = document.querySelector("#product-id");
+   console.log(id+" , "+name+" , "+content)
+    
+    idInnput.value=id;
+    jokeName.value=name;
+    contentName.value=content;
     document.querySelector("#task-save-btn").style.display = 'none';
     document.querySelector("#task-update-btn").style.display = 'block';
-
     document.querySelector("#product-id").value = id;
-	console.log(id);
-
-    $.ajax({
-        type: "POST",
-        url: '../../app/controller/controller.php',
-        data: {openTask : id},
-        success: function (obj) {
-            console.log(obj);
-            document.getElementById('joke-name').value                                    = obj[0];
-            document.getElementById('joke-content').value                                  = obj[1];
-        }
-    });
-
+     
+	// console.log(id);
 }
